@@ -1,0 +1,55 @@
+@mixin button {
+    min-width: none;
+    border: none;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    background: transparent;
+    color: var(--black);
+    &:hover {
+        background-color: var(--black);
+    }
+    &:active {
+        background-color: rgba(10, 9, 9, 0);
+    }
+    &:disabled {
+        opacity: .5;
+        cursor: no-drop;
+        background-color: var(--gray);
+        color: var(--dark);
+        &:hover, &:active {
+            background-color: var(--gray);
+            color: var(--dark);
+        }
+    }
+}
+@mixin button-green {
+    @include button;
+    background-color: var(--green);
+    color: var(--white);
+    &:hover {
+        background-color: var(--green-hover);
+    }
+    &:active {
+        background-color: var(--green-active);
+    }
+}
+
+@mixin button-black {
+    @include button;
+    background-color: var(--black);
+    color: var(--white);
+    &:hover {
+        background-color: var(--black-hover);
+    }
+    &:active {
+        background-color: var(--black-active);
+    }
+}

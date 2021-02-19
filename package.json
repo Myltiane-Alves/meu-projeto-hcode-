@@ -1,0 +1,27 @@
+{
+  "name": "meu-projeto-hcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-modules": "^1.0.1",
+    "sass": "^1.32.6"
+  },
+  "devDependencies": {
+   
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch public/assets/sass/main.scss:public/assets/css/main.css "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Myltiane-Alves/meu-projeto-hcode-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Myltiane-Alves/meu-projeto-hcode-/issues"
+  },
+  "homepage": "https://github.com/Myltiane-Alves/meu-projeto-hcode-#readme"
+}
