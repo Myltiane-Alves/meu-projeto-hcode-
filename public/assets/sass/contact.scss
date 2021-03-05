@@ -1,0 +1,184 @@
+#contact {
+    flex-direction: column;
+    h2 {
+        font-size: 27px;
+        font-weight: bold;
+        color: var(--dark-0);
+        text-transform: uppercase;
+        margin: 0;
+        padding: 10px var(--space);
+    }
+    .contact-home {
+     flex-direction: column;
+     form {  
+       margin-bottom: 30px;   
+       header {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         width: 100%;        
+         hr {
+          width: 68px;
+          border: none;
+          border-top: 4px solid var(--second);
+          margin: 10px 0;
+         }
+         .title-form {
+          color: var(--laranja);
+          font-weight: 400;
+          font-size: 26px;
+         }
+       }
+     }
+     #map {
+        background-image: url(../img/mapa.webp);
+        height: 263px;
+        width: 100%;
+        margin-top: var(--space);
+        //flex-direction: column;     
+        //margin-top: 100px;        
+     }
+    }
+    
+    .contact-section {
+        flex-direction: column;
+        padding-top: 30px;
+        > h2 {
+            font-size: 27px;
+            font-weight: bold;
+            color: var(--dark-0);
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0 var(--space);
+        }
+        > section {
+            flex-direction: column;
+            form {  
+                margin-bottom: 30px;   
+                header {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 100%;        
+                    hr {
+                        width: 68px;
+                        border: none;
+                        border-top: 4px solid var(--second);
+                        margin: 10px 0;
+                    }
+                    .title-form {
+                      color: var(--laranja);
+                      font-weight: 400;
+                      font-size: 26px;
+                    }
+               }
+            }
+        }
+        p {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--gray);
+        }
+        #map {
+         flex-direction: column;
+         margin-top: 100px;      
+        }
+        .adress {
+            flex-direction: column;
+            div {
+                flex-direction: column;
+                h3 {
+                  font-weight: 600;
+                  font-size: 20px;
+                  color: var(--dark-gray);
+                  padding-left: 15px; 
+                  margin: 0; 
+                } 
+                p {
+                  font-size: 16px;
+                  font-weight: 100;
+                  padding-left: 15px; 
+                }
+            }
+        }
+    }
+    .title {
+        flex-direction: column;
+        background-color: var(--dark-gray);
+        height: 120px;
+        h1 {
+          color: var(--white);
+          font-size: 50px;
+          text-align: center;
+          font-weight: bold;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #contact {
+        
+        .contact-section {
+            > section {
+              .adress {
+                  display: grid;
+                  grid-template-columns:  1fr 1fr;
+              }  
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+  #contact {
+    .contact-home {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        form {
+            max-width: unset;
+            textarea {
+                min-height: 160px;
+                resize: vertical;
+            }
+        }
+        #map {
+            flex-direction: column;
+            width: 100%;
+        }
+    }  
+    .contact-section {
+        > section {
+            flex-direction:  column;
+            form {
+               max-width: unset;
+               textarea {
+                   min-height: 160px;
+                   resize: vertical;
+               }
+            }
+        }
+        .contacts {
+            flex-direction: row;
+        }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #contact {
+    .contact-section {
+        margin: var(--space);
+        h2 {
+            margin: 5px;
+            padding: 15px;
+        }
+        > section {
+            display: grid;
+            grid-template-columns:  1fr 1fr;
+        }
+        .adress {
+            height: 100px;        
+        }
+    }    
+  }
+}

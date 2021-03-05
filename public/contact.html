@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="theme-color" content="#e1dedd" />
+    <meta name="description" content="Conheça nossa cliníca" />
+    <meta name="msapplication-TileColor" content="#5A96D5" />
+    
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="menu-overlay" data-close="menu"></div>
+      <a href="http://index.html"><img src="assets/img/vision-clinic.webp" class="logo" alt="Logo Vision Clinic" /></a>
+      <button type="button" id="btn-open" aria-label="Botão para Abrir Menu Mobile" >
+        <svg id="menu-black-18dp" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+          <path id="Caminho_215" data-name="Caminho 215" d="M0,0H32V32H0Z" fill="none" />
+          <path id="Caminho_216" data-name="Caminho 216" d="M3,18H29V16H3Zm0-5H29V11H3ZM3,6V8H29V6Z" transform="translate(0 4)" />
+        </svg>
+      </button>
+
+      <div class="menu">    
+        <nav>
+          <button type="button"id="btn-close" data-close="menu" aria-label="Fechar Menu Mobile"  >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+              <path d="M0,0H24V24H0Z" fill="none" /> <path d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z"/>
+            </svg>
+          </button>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li ><a href="services.html">Serviços</a></li>
+            <li><a href="schedules-new.html">Agendamentos</a>
+          </ul>
+        </nav>  
+        <div class="footer">
+          <hr />
+          <div>
+            <picture>
+                <a href="profile.html"><img src="assets/img/jordan-kelley.webp" alt="Jordan Kelley" /></a>
+            </picture>
+            <div>
+                <a href="profile.html">
+                    <strong>Jordan Kelley</strong>
+                    <small>jordan-kelley@gmail.com</small>
+                </a>
+            </div>
+            <button type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"/><path d="M10.09,15.59,11.5,17l5-5-5-5L10.09,8.41,12.67,11H3v2h9.67ZM19,3H5A2,2,0,0,0,3,5V9H5V5H19V19H5V15H3v4a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z" fill="#333"/></svg>
+            </button>
+        </div>
+        <a href="auth.html" class="btn-register">Fazer Login</a>
+      </div>
+      </div>
+    </header>
+
+    <main id="contact">
+        <div class="title">
+          <h1>Contato</h1>
+        </div>
+        <section class="contact-section">
+            <h2>Entre em Contato</h2>
+    
+            <section>
+    
+              <form>
+                
+                <div class="fields">
+    
+                    <div class="field">
+                        <input type="text" name="name" id="name"/>
+                        <label for="name">Nome Completo</label><br>
+                    </div>
+                    
+                    <div class="field">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email"/>
+                    </div>
+    
+                </div>
+    
+                <div class="field">
+                    <textarea name="message" id="message"></textarea>
+                    <label for="message">Mensagem</label>
+                </div>
+    
+                <div class="actions">
+                    <button type="submit">Enviar</button>
+                </div>
+    
+            </form>  
+
+             <div class="adress">
+
+                <div>
+                    <h3>Ceilândia DF</h3>
+                    <p>QNN QD 20, Conjunto P, Lote 56 - Brasília DF<br> Seg-Sex: 8h às 18h / Sáb: 8h às 12h</p> 
+                 </div> 
+   
+                 <div>
+                    <h3>Taguatinga DF</h3>
+                    <p>24h: CNC 01, Lote 14 - Edifício
+                        Isob - Brasília - DF<br> & Asa Sul: 714/914 Sul - Edifício Talento, Térreo - Próximo ao LBV 
+                    </p> 
+                 </div> 
+   
+                 <div>
+                    <h3>Samambaia DF</h3>
+                    <p>QN 204, Conj. 1 - Lotes 17/18, Lojas 01, 02 e 03 - Brasília - DF<br> Seg-Sex: 8h às 18h / Sáb: 8h às 12h</p> 
+                 </div> 
+   
+                 <div>
+                    <h3>Asa sul DF</h3>
+                    <p>714/914 Sul - Edifício Talento, Térreo - <br> Brasília - DF <br> Seg-Sex: 8h às 18h / Sáb: 8h às 12h</p> 
+                 </div> 
+             </div>
+              
+            </section>
+            
+            <div id="map">
+            
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.206311665319!2d-43.228717585034445!3d-22.90575998501238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e58a085b7af%3A0x4d11e9a933d38ce3!2sMuseu+Nacional+-+UFRJ!5e0!3m2!1spt-BR!2sbr!4v1537538326477"
+               width="100%" height="370" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </section>
+     
+    </main>
+    
+    <footer id="footer">
+      
+      <button type="button" aria-label="Whatsapp" href="https://api.whatsapp.com/send/?phone=5561984915007&text=Vim+Pelo+site&app_absent=0">   
+        <a href="https://api.whatsapp.com/send/?phone=5561984915007&text=Vim+Pelo+site&app_absent=0"><img src="assets/img/whatsapp.png" alt="Botão do Whatsapp"></a>
+       </button>
+      <div class="columns">
+        <div>
+            <ul class="links">
+                <li class="title">Links</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+            <ul>
+                <li class="title">Contato</li>
+                <li>E-mail:&nbsp;<a href="https://www.google.com/gmail/">support@ferrari.it</a></li>
+                <li class="social">
+                    <a href="https://pt-br.facebook.com/"><img src="assets/img/facebook.webp" alt="Facebook" /></a>
+                    <a href="https://twitter.com/"><img src="assets/img/twitter.webp" alt="Twitter" /></a>
+                    <a href="https://www.youtube.com/"><img src="assets/img/youtube.webp" alt="Youtube" /></a>
+                    <a href="https://www.instagram.com/"><img src="assets/img/instagram.webp" alt="Instagram" /></a>
+                </li>
+            </ul>
+        </div>
+        <a href="index.html" class="logo">
+          <img src="assets/img/vision-clinic-white.webp" alt="Logo vision clinic branca" />
+        </a>
+      </div>
+      <p>2021 © Olhar. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

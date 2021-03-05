@@ -19,6 +19,11 @@ body {
         min-height: calc(100vh - 400px);
     }    
 }
+body, html {
+    overflow-x: hidden;
+}
+
+
 @media (min-width: 1200px) {
     body {
         > main {

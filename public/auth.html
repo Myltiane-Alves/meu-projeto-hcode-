@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="theme-color" content="#e1dedd" />
+    <meta name="description" content="Conheça nossa cliníca" />
+    <meta name="msapplication-TileColor" content="#5A96D5" />
+    
+    <link rel="stylesheet" href="assets/css/main.css" />
+ </head>
+<body>
+   
+    <main id="auth">
+       <section>
+           
+        <a href="http://index.html"><img src="assets/img/vision-clinic.webp" class="logo" alt="Logo Vision Clinic" /></a>
+            <form id="auth-email" class="hide">
+                <h1>Autenticação</h1>
+
+                <div class="field">
+                    <input type="email" name="email"id="email" />
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="actions">
+                    
+                    <a href="auth.html#register" class="link">Criar uma Conta</a>
+                    <button type="button">Próxima</button>
+                </div>
+
+            </form>
+
+            
+            <form id="login" class="hide">
+                <h1>Fazer Login</h1>
+
+                <div class="field">
+                    <input type="email" name="email"id="email-login"
+                    readonly value="myltiane@olhar.com.br" />
+                    <label for="email-login">E-mail</label>
+                </div>
+
+                <div class="field">
+                    <input type="password" name="password" id="password" />
+                    <label for="password">Digite sua Senha</label>
+                </div>
+
+                <div class="actions">
+                    <a href="auth.html#forget" class="link"> >Esqueceu sua senha?</a>
+                    <a href="auth.html" class="link">Este não é o seu e-mail?</a>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+
+            <form id="register" >
+               
+                <h1>Criar conta</h1>
+
+                <div class="field">
+                    <input type="email" name="email"id="email-login"
+                    readonly value="myltiane@olhar.com.br" />
+                    <label for="email-login">E-mail</label>
+                </div>
+
+                <div class="field">
+                    <input type="text" name="name" id="name" />
+                    <label for="name">Nome Completo</label>
+                </div>
+
+                <div class="field">
+                    <input type="text" name="birth_at" id="birth_at" />
+                    <label for="birth_at">Data de Nascimento</label>
+                </div>
+
+                <div class="field">
+                    <input type="password" name="password" id="password-new" />
+                    <label for="password-new">Crie uma Senha</label>
+                </div>
+
+                <div class="field">
+                    <input type="password" name="password_confirm" id="password-confirm" />
+                    <label for="password-confirm">Confirme a Senha</label>
+                </div>
+
+                <div class="actions">
+                    
+                    <a href="auth.html#login" class="link">Já tem uma Conta?</a>
+                    <button type="submit">Cadastrar</button>
+                </div>
+
+            </form>
+
+            <form id="forget" class="hide">
+
+                <h1>Esqueci a Senha</h1>
+
+                <div class="message">
+                    <img src="assets/img/check-circle.svg" alt="ok" />
+                    <span>Verifique as instruções no seu e-mail.</span>
+                </div>
+
+            </form>
+
+            <form id="reset" class="hide">
+
+                <h1>Redefinir senha</h1>
+
+                <hr />
+
+                <div class="field">
+                    <input type="password" name="password" id="password-reset" />
+                    <label for="password-reset">Crie uma Nova Senha</label>
+                </div>
+
+                <div class="actions">
+
+                    <button type="submit">Redefinir</button>
+
+                </div>
+
+            </form>
+
+            <p>2021 © Olhar. All rights reserved.</p>
+       </section> 
+    </main>
+
+  
+</body>
+</html>

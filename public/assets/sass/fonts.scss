@@ -2,7 +2,19 @@
     font-family: 'Montserrat';
     src: local("Montserrat"), url("../fonts/Montserrat-Black.ttf") format("truetype");
     font-style: normal;
-    font-weight : black;
+    font-weight : 600;
+} 
+@font-face {
+    font-family: 'Montserrat';
+    src: local("Montserrat"), url("../fonts/Montserrat-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight : 500;
+} 
+@font-face {
+    font-family: 'Montserrat';
+    src: local("Montserrat"), url("../fonts/Montserrat-ExtraBoldItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight : 600;
 } 
 
 @font-face {

@@ -1,0 +1,134 @@
+#doctors {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100vw;
+    justify-content: center;
+    align-items: center;
+    //background-color: #5663C1;
+    .doctors-title {
+      flex-direction: column;
+      padding: var(--space);
+      align-items: center;
+      h2 {
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+        margin: var(--space);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--laranja);
+      }
+      p {
+        font-size: 20px;
+        font-weight: 300;
+        margin: var(--space);
+        color: var(--dark-gray);
+      }
+    }
+    .doctors-title + div {
+      flex-direction: column;
+    }
+    .doctor-information {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      img {
+        max-width: 150px;
+        width: 100%;
+        border-radius: 100%;
+      }
+      .doctor-social-media {
+        min-width: 280px;
+        height: 75px;
+        margin: 10px auto;
+        justify-content: space-evenly;
+        align-items: center;
+        opacity: 30%;
+        border-radius: var(--border-radius);
+        
+        a {
+          margin: 0 auto;
+         
+          > img {
+            width: 30px;
+            height: 30px;
+            margin: auto 0;
+            color: #fff;
+          }
+        }
+      }
+    }
+    h3 {
+      font-size: 25px;
+      font-weight: bold;
+      margin: 0;
+      margin: 10px 0 7px;
+      color: var(--laranja);
+    }
+    h4 {
+      font-size: 12px;
+      font-weight: bold;
+      margin: 0;
+      margin: 10px 0 7px;
+      color: var(--blue);
+    }
+    p {
+      margin: var(--spacer);
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--gray);
+      margin-bottom: 15px;
+      text-align: center;
+    }
+}
+
+@media (min-width: 920px) {
+  #doctors { 
+    .doctors-title { 
+      text-align: center;
+      h3 {
+        margin: 0;
+        padding-top: 30px;
+      }      
+    }  
+    .doctor-grid {
+      flex-direction: row;
+      display: grid;
+      grid-template-columns: 1fr 1fr ;
+      .doctor-information {
+        margin: 10px;
+        //background-color: blue;
+       // display: grid;
+       // grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+  
+@media (min-width: 1200px) {
+  #doctors {
+    margin: 0;
+    .doctors-title {
+      h3 {
+        font-size: 50px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 19px;
+      }
+    }
+    .doctor-grid {
+      margin: 0;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      .doctor-information {
+        margin: 0;
+        padding: 20px;
+        align-items: center;
+        justify-content: space-between;
+          
+      }
+    }
+  }
+}

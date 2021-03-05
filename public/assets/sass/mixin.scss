@@ -1,55 +1,82 @@
 @mixin button {
-    min-width: none;
+    min-width: 130px;
     border: none;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 16px;
+    font-family: "Montserrat";
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
+    outline: none;
     cursor: pointer;
     border-radius: var(--border-radius);
     background: transparent;
-    color: var(--black);
+    color: var(--white);
     &:hover {
-        background-color: var(--black);
+        background-color: var(--laranja-hover);
     }
     &:active {
-        background-color: rgba(10, 9, 9, 0);
+        background-color: var(--laranja);
     }
     &:disabled {
         opacity: .5;
         cursor: no-drop;
-        background-color: var(--gray);
-        color: var(--dark);
+        background-color: var(--gray-3);
+        color: var(--dark-0);
         &:hover, &:active {
-            background-color: var(--gray);
-            color: var(--dark);
+            background-color: var(--gray-3);
+            color: var(--dark-0);
         }
     }
 }
-@mixin button-green {
+
+@mixin button-laranja {
     @include button;
-    background-color: var(--green);
+    background-color: var(--laranja);
     color: var(--white);
     &:hover {
-        background-color: var(--green-hover);
+        background-color: var( --laranja-hover);
     }
     &:active {
-        background-color: var(--green-active);
+        background-color: var(--laranja);
     }
 }
 
-@mixin button-black {
+@mixin button-white {
     @include button;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--white);
     &:hover {
-        background-color: var(--black-hover);
+        background-color: var(--white);
     }
     &:active {
-        background-color: var(--black-active);
+        background-color: var(--white);
     }
 }
+
+@mixin button-gray {
+    @include button;
+    background-color: var(--gray-3);
+    color: var(--gray-0);
+    &:hover {
+        background-color: var(--gray-hover);
+    }
+    &:active {
+        background-color: var(--gray-active);
+    }
+}
+
+@mixin button-red {
+    @include button;
+    background-color: var(--red);
+    color: var(--white);
+    &:hover {
+        background-color: var(--red-hover);
+    }
+    &:active {
+        background-color: var(--red-active);
+    }
+}
+
