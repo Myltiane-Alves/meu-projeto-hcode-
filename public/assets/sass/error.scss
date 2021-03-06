@@ -24,7 +24,7 @@
                 color: var(--white);
               }
               button {
-                @include button-laranja; 
+                @include button-main; 
                 border-radius: 50px;
                 width: 50%;
                 background-color: var(--laranja);

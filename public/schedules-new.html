@@ -40,43 +40,43 @@
         <div class="footer">
           <hr />
           <div>
-            <picture>
-                <a href="profile.html"><img src="assets/img/jordan-kelley.webp" alt="Jordan Kelley" /></a>
-            </picture>
-            <div>
-                <a href="profile.html">
-                    <strong>Jordan Kelley</strong>
-                    <small>jordan-kelley@gmail.com</small>
-                </a>
-            </div>
-            <button type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"/><path d="M10.09,15.59,11.5,17l5-5-5-5L10.09,8.41,12.67,11H3v2h9.67ZM19,3H5A2,2,0,0,0,3,5V9H5V5H19V19H5V15H3v4a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z" fill="#333"/></svg>
-            </button>
-        </div>
+              <picture>
+                  <a href="profile.html"><img src="assets/img/jordan-kelley.webp" alt="Jordan Kelley" /></a>
+              </picture>
+              <div>
+                  <a href="profile.html">
+                      <strong>Jordan Kelley</strong>
+                      <small>jordan-kelley@gmail.com</small>
+                  </a>
+              </div>
+              <button type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"/><path d="M10.09,15.59,11.5,17l5-5-5-5L10.09,8.41,12.67,11H3v2h9.67ZM19,3H5A2,2,0,0,0,3,5V9H5V5H19V19H5V15H3v4a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z" fill="#333"/></svg>
+              </button>
+          </div>
           <a href="auth.html" class="btn-register">Fazer Login</a>
       </div>
       </div>
     </header>
+
 
   <main id="schedules">
     <div class="title">
       <h1>Agendamento de Consultas</h1>
     </div>
     <section>
+      
       <div>
-        <header>
-          <h2>AGENDE JÁ SUA CONSULTA <br> PELO FORMULÁRIO ABAIXO  </h2>
-        </header>
+       
         <form  class="schedules-form" >
-        
+         
+          <h2>AGENDE JÁ SUA CONSULTA </h2>
+          <hr />
+
           <div class="field">
-            <select>
-              <option value="Consulta">
-                Selecione o Serviço
-              </option>
-              <label for="name">Consulta</label>
-              <option value="OFTALMOPEDIATRIA">Exames</option>
-              <option value="OFTALMOLOGIA - ADULTO">Cirurgias</option>
+            <label name="exam">Todos os Exames:</label>
+            <select name="exam">
+              <option value="Exames">Exames</option>     
+              <option value="Cirurgias">Cirurgias</option>   
             </select>
             
           </div>
@@ -143,7 +143,7 @@
     </div>
     <p>2021 © Olhar. All rights reserved.</p>
   </footer>
-
+  <script src="assets/scripts/main.js"></script>  
  </body>
 </html>
   

@@ -101,7 +101,7 @@ form .field {
   margin-bottom: var(--space);
 }
 form .field label {
-  color: var(--gray-3);
+  color: var(--black);
   font-size: 14px;
   position: absolute;
   top: 10px;
@@ -148,8 +148,9 @@ form button {
   border-radius: var(--border-radius);
   background: transparent;
   color: var(--white);
-  background-color: var(--laranja);
+  background-color: var(--main);
   color: var(--white);
+  font-weight: 400;
 }
 form button:hover {
   background-color: var(--laranja-hover);
@@ -168,10 +169,10 @@ form button:disabled:hover, form button:disabled:active {
   color: var(--dark-0);
 }
 form button:hover {
-  background-color: var(--laranja-hover);
+  background-color: var(--main);
 }
 form button:active {
-  background-color: var(--laranja);
+  background-color: var(--main);
 }
 
 @media (min-width: 1200px) {
@@ -194,263 +195,63 @@ form button:active {
     max-width: 340px;
   }
 }
-header.page-title {
-  display: flex;
+#schedules {
+  min-width: 320px;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+}
+#schedules .title {
+  flex-direction: column;
+  background-color: var(--dark-gray);
+  height: 150px;
   width: 100%;
 }
-header.page-title h1, header.page-title h2, header.page-title h3, header.page-title h4, header.page-title h5, header.page-title h6 {
-  color: var(--laranja);
-  margin: 0;
-  font-size: 23px;
+#schedules .title h1 {
+  color: var(--white);
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+#schedules section {
+  padding-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#schedules section div form h2 {
+  text-align: center;
+  color: var(--green);
+  font-size: 27px;
   font-weight: 600;
 }
-header.page-title hr {
-  width: 68px;
+#schedules section div form button {
+  height: 40px;
+  width: 50%;
+  font-weight: 500;
+  margin: auto;
+  background-color: var(--main);
+  border-radius: 15px 15px 15px 15px;
   border: none;
-  border-top: 4px solid var(--red);
-  margin: 10px 0;
+  position: relative;
+  display: inline-block;
 }
 
-.page {
-  flex-direction: column;
-  height: calc(100vh - 140px);
-  overflow: auto;
-}
-.page aside {
-  width: 100%;
-  position: fixed;
-  z-index: 2;
-  right: 0;
-  bottom: 80px;
-  height: 50px;
-  background-color: var(--gray-12);
-  border-bottom: var(--gray-3) 1px solid;
-  flex-direction: column;
-  transition: all 0.2s ease-in-out;
-}
-.page aside header {
-  font-size: 32px;
-  color: var(--dark);
-  height: 130px;
-  justify-content: center;
-  align-items: center;
-  display: none;
-}
-.page aside section {
-  padding: 0 var(--space);
-  display: none;
-  flex: 1;
-  max-height: calc(100vh - 339px);
-  overflow-y: auto;
-  /* table {
-       border-collapse: collapse;
-       width: 100%;
-       border-bottom: var(--gray) 1px solid;
-       td {
-           padding: var(--space) 0;
-           border-top: var(--gray) 1px solid;
-           &.price {
-               text-align: right;
-           }
-       }
-   }*/
-}
-.page aside footer {
-  height: 50px;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space);
-  font-size: 18px;
-  color: var(--dark);
-}
-.page aside footer .total {
-  font-weight: bold;
-  margin-left: var(--space);
-  text-align: right;
-}
-.page aside footer button {
-  min-width: 130px;
-  border: none;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  font-family: "Montserrat";
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: var(--border-radius);
-  background: transparent;
-  color: var(--white);
-  min-width: 50px;
-  width: 50px;
-}
-.page aside footer button:hover {
-  background-color: var(--laranja-hover);
-}
-.page aside footer button:active {
-  background-color: var(--laranja);
-}
-.page aside footer button:disabled {
-  opacity: 0.5;
-  cursor: no-drop;
-  background-color: var(--gray-3);
-  color: var(--dark-0);
-}
-.page aside footer button:disabled:hover, .page aside footer button:disabled:active {
-  background-color: var(--gray-3);
-  color: var(--dark-0);
-}
-.page aside footer button svg {
-  transform: rotate(0deg);
-  transition: all 0.3s ease-in-out;
-}
-.page aside.open {
-  height: calc(100vh - 158px);
-}
-.page aside.open header, .page aside.open section {
-  display: flex;
-}
-.page aside.open footer button svg {
-  transform: rotate(180deg);
-}
-.page .page-title {
-  margin: var(--space);
-}
-.page > header {
-  width: 100%;
-  min-height: 130px;
-  background-color: var(--dark-gray);
-  color: var(--white);
-  justify-content: center;
-  align-items: center;
-  margin-top: 18px;
-}
-.page > header h1 {
-  font-size: 32px;
-  font-weight: bold;
-}
-.page > main {
-  margin-bottom: 80px;
-  flex-direction: column;
-}
-.page > main .toast {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-}
-.page > main .toast.open {
-  transform: translateY(-80px);
-}
-.page footer.fixed {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  background-color: var(--dark-gray);
-  height: 80px;
-  left: 0;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space);
-  z-index: 4;
-}
-.page footer.fixed button, .page footer.fixed a {
-  min-width: 130px;
-  border: none;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  font-family: "Montserrat";
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: var(--border-radius);
-  background: transparent;
-  color: var(--white);
-  background-color: var(--gray-3);
-  color: var(--gray-0);
-}
-.page footer.fixed button:hover, .page footer.fixed a:hover {
-  background-color: var(--laranja-hover);
-}
-.page footer.fixed button:active, .page footer.fixed a:active {
-  background-color: var(--laranja);
-}
-.page footer.fixed button:disabled, .page footer.fixed a:disabled {
-  opacity: 0.5;
-  cursor: no-drop;
-  background-color: var(--gray-3);
-  color: var(--dark-0);
-}
-.page footer.fixed button:disabled:hover, .page footer.fixed button:disabled:active, .page footer.fixed a:disabled:hover, .page footer.fixed a:disabled:active {
-  background-color: var(--gray-3);
-  color: var(--dark-0);
-}
-.page footer.fixed button:hover, .page footer.fixed a:hover {
-  background-color: var(--gray-hover);
-}
-.page footer.fixed button:active, .page footer.fixed a:active {
-  background-color: var(--gray-active);
-}
-
-@media (min-width: 1200px) {
-  header.page-title h1, header.page-title h2, header.page-title h3, header.page-title h4, header.page-title h5, header.page-title h6 {
-    font-size: 32px;
+@media (min-width: 500px) {
+  #schedules section {
+    width: 500px;
+    height: initial;
+    padding: 50px 0 50px 0px;
   }
-
-  .page aside, .page aside.open {
-    width: 370px;
-    height: calc(100vh - 118px);
-    bottom: 0;
-  }
-  .page aside header, .page aside section, .page aside.open header, .page aside.open section {
-    display: flex;
-  }
-  .page aside header, .page aside.open header {
-    height: 160px;
-  }
-  .page aside footer, .page aside.open footer {
-    height: 80px;
-  }
-  .page aside footer > div, .page aside.open footer > div {
+  #schedules section form {
+    border: #ddd 1px solid;
+    border-radius: calc(2 * var(--border-radius));
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 22px;
-  }
-  .page aside footer button, .page aside.open footer button {
-    display: none;
-  }
-  .page > header {
-    justify-content: flex-start;
-    padding-left: 185px;
-    min-height: 160px;
-  }
-  .page > header h1 {
-    font-size: 32px;
-  }
-  .page footer.fixed {
-    justify-content: flex-start;
-  }
-  .page footer.fixed button + button, .page footer.fixed a + a, .page footer.fixed button + a, .page footer.fixed a + button {
-    margin-right: var(--space);
-  }
-  .page footer.fixed button, .page footer.fixed a {
-    order: 1;
-  }
-  .page footer.fixed button:first-child, .page footer.fixed a:first-child {
-    order: 2;
+    padding: 50px;
+    padding-top: 100px;
   }
 }
 #header {
@@ -577,7 +378,7 @@ header.page-title hr {
   border-radius: var(--border-radius);
   background: transparent;
   color: var(--white);
-  background-color: var(--laranja);
+  background-color: var(--main);
   color: var(--white);
 }
 #header .menu .btn-register:hover {
@@ -597,10 +398,10 @@ header.page-title hr {
   color: var(--dark-0);
 }
 #header .menu .btn-register:hover {
-  background-color: var(--laranja-hover);
+  background-color: var(--main);
 }
 #header .menu .btn-register:active {
-  background-color: var(--laranja);
+  background-color: var(--main);
 }
 #header button {
   padding: 13px;
@@ -887,7 +688,7 @@ header.page-title hr {
   border-radius: var(--border-radius);
   background: transparent;
   color: var(--white);
-  background-color: var(--laranja);
+  background-color: var(--main);
   color: var(--white);
   border-radius: 50px;
   width: 50%;
@@ -911,10 +712,10 @@ header.page-title hr {
   color: var(--dark-0);
 }
 #home .full-banner-home header .hero > div button:hover {
-  background-color: var(--laranja-hover);
+  background-color: var(--main);
 }
 #home .full-banner-home header .hero > div button:active {
-  background-color: var(--laranja);
+  background-color: var(--main);
 }
 #home .about {
   flex-direction: column;
@@ -2044,7 +1845,7 @@ header.page-title hr {
   justify-content: flex-end;
 }
 #auth > section p {
-  color: var(--gray);
+  color: var(--main);
   font-size: 16px;
 }
 
@@ -2345,7 +2146,7 @@ header.page-title hr {
   border-radius: var(--border-radius);
   background: transparent;
   color: var(--white);
-  background-color: var(--laranja);
+  background-color: var(--main);
   color: var(--white);
   border-radius: 50px;
   width: 50%;
@@ -2369,10 +2170,10 @@ header.page-title hr {
   color: var(--dark-0);
 }
 #error section button:hover {
-  background-color: var(--laranja-hover);
+  background-color: var(--main);
 }
 #error section button:active {
-  background-color: var(--laranja);
+  background-color: var(--main);
 }
 
 /*# sourceMappingURL=main.css.map */

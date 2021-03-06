@@ -16,9 +16,8 @@ if(btnLogout) {
     })
 }
 
-if(menu) {
 
-}
+
 if(btnOpen) {
     btnOpen.addEventListener('click', e => {
         body.classList.add('open-menu')

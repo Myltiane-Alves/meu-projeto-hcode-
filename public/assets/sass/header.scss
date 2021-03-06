@@ -115,7 +115,8 @@
     }
     .btn-register {
      
-      @include button-laranja;
+      @include button-main;
+     
     }   
   }
   button {

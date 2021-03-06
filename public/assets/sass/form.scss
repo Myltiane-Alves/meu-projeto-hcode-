@@ -11,7 +11,7 @@ form {
         width: 100%;
         margin-bottom: var(--space);
         label {
-            color: var(--gray-3);
+            color: var(--black);
             font-size: 14px;
             position: absolute;
             top: 10px;
@@ -44,7 +44,8 @@ form {
         }
     }
     button {
-        @include button-laranja;
+        @include button-main;
+        font-weight: 400;
     }
 }
 

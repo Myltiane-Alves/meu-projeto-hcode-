@@ -33,15 +33,15 @@
     }
 }
 
-@mixin button-laranja {
+@mixin button-main {
     @include button;
-    background-color: var(--laranja);
+    background-color: var(--main);
     color: var(--white);
     &:hover {
-        background-color: var( --laranja-hover);
+        background-color: var( --main);
     }
     &:active {
-        background-color: var(--laranja);
+        background-color: var(--main);
     }
 }
 
