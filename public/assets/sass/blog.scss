@@ -17,7 +17,7 @@
     background-color: #f8f8f8;
     h2 {
       text-align: center;
-      color: var(--laranja);
+      color: var(--blue);
       font-size: 40px;
       margin: 0;
     }
@@ -56,14 +56,10 @@
 
             h3 {
               margin: 5px 0;
-              font-size: 18px;
-              color: var(--laranja);
-            }
-
-            h5 {
-              margin: 5px 0;
-              font-size: 25px;
-              color: var(--main);
+              font-size: 20px;
+              color: var(--dark-gray);
+              font-weight: 800;
+              font-family: "Montsserat", sans-serif;
             }
 
             p {
@@ -83,7 +79,7 @@
               text-decoration: none;
               margin: 0 5px;
               font-size: 16px;
-              color: var(--laranja);
+              color: var(--blue);
               font-weight: bold;
             }
           }

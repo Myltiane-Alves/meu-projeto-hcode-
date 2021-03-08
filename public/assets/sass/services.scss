@@ -55,7 +55,7 @@
     margin-top: var(--space);
     .service-title {
       flex-direction: column;
-      margin-top: var(--space);
+      padding: var(--space);
       padding-bottom: 20px;
       background-color: #5663c1;
       h3 {
@@ -98,12 +98,13 @@
       }
     }
     .service-photo {
+      background-image: url(../img/blog-bg.webp);
       width: 100%;
-      margin: var(--space); 
-      > img {
-        width: 90%;
-        height: 100%;
-      }
+      height: 70vh;
+      display: table-cell;
+      vertical-align: middle;
+      background-position: center;
+      background-size: cover;
     }
   }
  
