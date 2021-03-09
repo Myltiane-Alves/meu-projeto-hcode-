@@ -1,34 +1,78 @@
 #error {
-    section {
-        height: 80vh;
+    flex-direction: column;
+    height: 80vh;
+    .columns { 
+      margin-top: 40px;
+      header {
         flex-direction: column;
-            h1 {
-                margin: 0;
-                font-size: 60px;
-                font-weight: 600;
-                line-height: 1.5em;
-                text-align: center;
-            }
-           
-            p {
-             font-size: 16px;
-             text-align: center;
-             color: var(--gray);
-            }
-            button {
-                margin-left: 90px;
-                ;
-              }
-              button, a {
-                text-decoration: none;
-                color: var(--white);
-              }
-              button {
-                @include button-main; 
-                border-radius: 50px;
-                width: 50%;
-                background-color: var(--laranja);
-                border: var(--laranja) 1px solid;
-              }
+        h1 {
+          margin: 0;
+          font-size: 60px;
+          font-weight: 600;
+          line-height: 1.5em;
+          text-align: center;
+        }
+       
+        p {
+         font-size: 16px;
+         text-align: center;
+         color: var(--gray);
+        }
+      }
+      div {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        button {
+          margin: 0 10px 0 90px;
+          align-items: center;
+            
+        }
+        button, a {
+          text-decoration: none;
+          color: var(--white);
+        }
+        button {
+          @include button-main; 
+          border-radius: 50px;
+          width: 50%;
+          background-color: var(--laranja);
+          border: var(--laranja) 1px solid;
+        }
+      }  
     }
+  }
+
+
+@media (min-width: 576px) {
+  #error {
+      header {
+          height: initial;
+          min-height: initial;
+          width: 100%;
+      }
+  }
+}
+
+@media (min-width: 992px) {
+  #error {
+      .columns {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+      }
+  }
+}
+
+@media (min-width: 1200px) {
+  #error {
+    .columns {
+
+      h1 {
+
+      
+      }
+    }
+      
+  }
 }

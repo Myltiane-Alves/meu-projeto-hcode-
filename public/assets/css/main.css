@@ -2072,30 +2072,42 @@ form button:active {
   margin: 40px;
 }
 
-#error section {
+#error {
+  flex-direction: column;
   height: 80vh;
+}
+#error .columns {
+  margin-top: 40px;
+}
+#error .columns header {
   flex-direction: column;
 }
-#error section h1 {
+#error .columns header h1 {
   margin: 0;
   font-size: 60px;
   font-weight: 600;
   line-height: 1.5em;
   text-align: center;
 }
-#error section p {
+#error .columns header p {
   font-size: 16px;
   text-align: center;
   color: var(--gray);
 }
-#error section button {
-  margin-left: 90px;
+#error .columns div {
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
 }
-#error section button, #error section a {
+#error .columns div button {
+  margin: 0 10px 0 90px;
+  align-items: center;
+}
+#error .columns div button, #error .columns div a {
   text-decoration: none;
   color: var(--white);
 }
-#error section button {
+#error .columns div button {
   min-width: 130px;
   border: none;
   height: 50px;
@@ -2119,27 +2131,42 @@ form button:active {
   background-color: var(--laranja);
   border: var(--laranja) 1px solid;
 }
-#error section button:hover {
+#error .columns div button:hover {
   background-color: var(--laranja-hover);
 }
-#error section button:active {
+#error .columns div button:active {
   background-color: var(--laranja);
 }
-#error section button:disabled {
+#error .columns div button:disabled {
   opacity: 0.5;
   cursor: no-drop;
   background-color: var(--gray-3);
   color: var(--dark-0);
 }
-#error section button:disabled:hover, #error section button:disabled:active {
+#error .columns div button:disabled:hover, #error .columns div button:disabled:active {
   background-color: var(--gray-3);
   color: var(--dark-0);
 }
-#error section button:hover {
+#error .columns div button:hover {
   background-color: var(--main);
 }
-#error section button:active {
+#error .columns div button:active {
   background-color: var(--main);
+}
+
+@media (min-width: 576px) {
+  #error header {
+    height: initial;
+    min-height: initial;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  #error .columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
