@@ -16,14 +16,14 @@ if (authPage) {
       .querySelectorAll("#auth form")
       .forEach((el) => el.classList.add("hide"));
   };
-
+  //aqui eu estou exibindo o formulário de autentição para o usuário
   const showAuthForm = (id) => {
     document.getElementById(id).classList.remove("hide");
   };
-  //aqui eu estou exibindo o formulário de autentição para o usuário
 
   const authHash = () => {
     hideAuthForms();
+
     // verificando se o email está gravando no sessionStorage
     if (sessionStorage.getItem("email")) {
       document
@@ -46,7 +46,7 @@ if (authPage) {
         showAuthForm("reset");
         break;
       default:
-        //showAuthForm("auth-email");
+        //showAuthForm('auth-email');
         showAuthForm("login");
     }
   };
@@ -55,14 +55,14 @@ if (authPage) {
     authHash();
   });
 
-  window.addEventListener("haschange", (e) => {
+  window.addEventListener("hashchange", (e) => {
     authHash();
   });
 
   const formAuthEmail = document.querySelector("#auth-email");
 
   formAuthEmail.addEventListener("submit", (e) => {
-    e.prenventDefault();
+    e.preventDefault();
     const btnSubmit = e.target.querySelector("[type=submit]");
     btnSubmit.disabled = true;
 
@@ -74,7 +74,9 @@ if (authPage) {
   const formAuthRegister = document.querySelector("#register");
 
   formAuthRegister.addEventListener("submit", (e) => {
-    e.prenventDefault();
+    e.preventDefault();
+
+    hideAlertError(formAuthRegister);
 
     const values = getFormValues(formAuthRegister);
 
@@ -83,7 +85,7 @@ if (authPage) {
       .then((response) => {
         const { user } = response;
 
-        user.updateProfille({
+        user.updateProfile({
           displayName: values.name,
         });
 
@@ -110,7 +112,7 @@ if (authPage) {
           if (window.localhost.hostname === "localhost") {
             window.location.href = `http://localhost:8080${values.url}`;
           } else {
-            window.location.href = `https://clinicalvision-7100c.web.app${values.url}`;
+            window.location.href = `https://ferrar-myltiane.web.app${values.url}`;
           }
         } else {
           window.location.href = "";
@@ -162,9 +164,6 @@ if (authPage) {
     e.preventDefault();
 
     const btnSubmit = formReset.querySelector("[type=submit]");
-
-    btnSubmit.disabled = true;
-    btnSubmit.innerHTML = "Redefinindo...";
 
     btnSubmit.disabled = true;
     btnSubmit.innerHTML = "Redefinindo...";

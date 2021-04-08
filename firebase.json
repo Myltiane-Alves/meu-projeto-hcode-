@@ -1,10 +1,13 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  },
+  "apiKey": "AIzaSyAs6p4gADwBF8O6j51bA6Nxii8xCSlPv2A",
+  "authDomain": "clinicalvision-7100c.firebaseapp.com",
+  "projectId": "clinicalvision-7100c",
+  "storageBucket": "clinicalvision-7100c.appspot.com",
+  "messagingSenderId": "37774369733",
+  "appId": "1:37774369733:web:321f0b69076a96f085a1ac",
+  "measurementId": "G-JM3GW8M1D8"
 }

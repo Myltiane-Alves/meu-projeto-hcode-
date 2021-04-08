@@ -7,125 +7,134 @@
     <meta name="theme-color" content="#e1dedd" />
     <meta name="description" content="Conheça nossa cliníca" />
     <meta name="msapplication-TileColor" content="#5A96D5" />
-    
+
     <link rel="stylesheet" href="assets/css/main.css" />
- </head>
-<body>
-   
+  </head>
+  <body>
     <main id="auth">
-       <section>
-           
-        <a href="https://clinicalvision-7100c.web.app/index.html"><img src="assets/img/vision-clinic.webp" class="logo" alt="Logo Vision Clinic" /></a>
-            <form id="auth-email" class="hide">
-                <h1>Autenticação</h1>
+      <section>
+        <a href="https://clinicalvision-7100c.web.app/index.html"
+          ><img
+            src="assets/img/vision-clinic.webp"
+            class="logo"
+            alt="Logo Vision Clinic"
+        /></a>
+        <form id="auth-email" class="hide">
+          <h1>Autenticação</h1>
 
-                <div class="field">
-                    <input type="email" name="email"id="email" />
-                    <label for="email">Email</label>
-                </div>
+          <div class="field">
+            <input type="email" name="email" id="email" />
+            <label for="email">Email</label>
+          </div>
 
-                <div class="actions">
-                    
-                    <a href="auth.html" class="link">Criar uma Conta</a>
-                    <button type="button">Próxima</button>
-                </div>
+          <div class="actions">
+            <a href="auth.html#register" class="link">Criar uma Conta</a>
+            <button type="button">Próxima</button>
+          </div>
+        </form>
 
-            </form>
+        <form id="login">
+          <h1>Fazer Login</h1>
 
-            
-            <form id="login" class="hide">
-                <h1>Fazer Login</h1>
+          <div class="field">
+            <input type="email" name="email" id="email-login" />
+            <label for="email-login">E-mail</label>
+          </div>
 
-                <div class="field">
-                    <input type="email" name="email"id="email-login"
-                    readonly value="myltiane@olhar.com.br" />
-                    <label for="email-login">E-mail</label>
-                </div>
+          <div class="field">
+            <input type="password" name="password" id="password" />
+            <label for="password">Digite sua Senha</label>
+          </div>
 
-                <div class="field">
-                    <input type="password" name="password" id="password" />
-                    <label for="password">Digite sua Senha</label>
-                </div>
+          <div class="alert danger"></div>
 
-                <div class="actions">
-                    <a href="auth.html" class="link"> >Esqueceu sua senha?</a>
-                    <a href="auth.html" class="link">Este não é o seu e-mail?</a>
-                </div>
-                <button type="submit">Login</button>
-            </form>
+          <div class="actions">
+            <a href="auth.html#forget" class="link"> Esqueceu sua senha?</a>
+            <a href="auth.html#register" class="link"
+              >Este não é o seu e-mail?</a
+            >
+          </div>
+          <button type="submit">Login</button>
+        </form>
 
-            <form id="register" >
-               
-                <h1>Criar conta</h1>
+        <form id="register" class="hide">
+          <h1>Criar conta</h1>
 
-                <div class="field">
-                    <input type="email" name="email"id="email-register"
-                    readonly value="myltiane@olhar.com.br" />
-                    <label for="email-register">E-mail</label>
-                </div>
+          <div class="field">
+            <input type="email" name="email" id="email-register" />
+            <label for="email-register">E-mail</label>
+          </div>
 
-                <div class="field">
-                    <input type="text" name="name" id="name" />
-                    <label for="name">Nome Completo</label>
-                </div>
+          <div class="field">
+            <input type="text" name="name" id="name" />
+            <label for="name">Nome Completo</label>
+          </div>
 
-                <div class="field">
-                    <input type="text" name="birth_at" id="birth_at" />
-                    <label for="birth_at">Data de Nascimento</label>
-                </div>
+          <div class="field">
+            <input type="date" name="birth_at" id="birth_at" />
+            <label for="birth_at">Data de Nascimento</label>
+          </div>
 
-                <div class="field">
-                    <input type="password" name="password" id="password-new" />
-                    <label for="password-new">Crie uma Senha</label>
-                </div>
+          <div class="field">
+            <input type="password" name="password" id="password-new" />
+            <label for="password-new">Crie uma Senha</label>
+          </div>
 
-                <div class="field">
-                    <input type="password" name="password_confirm" id="password-confirm" />
-                    <label for="password-confirm">Confirme a Senha</label>
-                </div>
+          <div class="field">
+            <input
+              type="password"
+              name="password-confirm"
+              id="password-confirm"
+            />
+            <label for="password-confirm">Confirme a Senha</label>
+          </div>
 
-                <div class="actions">
-                    
-                    <a href="auth.html" class="link">Já tem uma Conta?</a>
-                    <button type="submit">Cadastrar</button>
-                </div>
+          <div class="alert danger"></div>
+          <div class="actions">
+            <a href="auth.html#login" class="link">Já tem uma Conta?</a>
+            <button type="submit">Cadastrar</button>
+          </div>
+        </form>
 
-            </form>
+        <form id="forget" class="hide">
+          <h1>Esqueci a Senha</h1>
 
-            <form id="forget" class="hide">
+          <div class="field">
+            <input type="email" name="email" id="email-forget" />
+            <label for="email-forget">E-mail</label>
+          </div>
 
-                <h1>Esqueci a Senha</h1>
+          <div class="alert danger"></div>
 
-                <div class="message">
-                    <img src="assets/img/check-circle.svg" alt="ok" />
-                    <span>Verifique as instruções no seu e-mail.</span>
-                </div>
+          <div class="actions">
+            <button type="submit">Enviar</button>
+          </div>
 
-            </form>
+          <div class="message" style="display: none">
+            <img src="assets/img/check-circle.svg" alt="ok" />
+            <span>Verifique as instruções no seu e-mail.</span>
+          </div>
+        </form>
 
-            <form id="reset" class="hide">
+        <form id="reset" class="hide">
+          <h1>Redefinir senha</h1>
 
-                <h1>Redefinir senha</h1>
+          <hr />
 
-                <hr />
+          <div class="field">
+            <input type="password" name="password" id="password-reset" />
+            <label for="password-reset">Crie uma Nova Senha</label>
+          </div>
 
-                <div class="field">
-                    <input type="password" name="password" id="password-reset" />
-                    <label for="password-reset">Crie uma Nova Senha</label>
-                </div>
+          <div class="actions">
+            <button type="submit">Redefinir</button>
+          </div>
+        </form>
 
-                <div class="actions">
-
-                    <button type="submit">Redefinir</button>
-
-                </div>
-
-            </form>
-
-            <p>2021 © Olhar. All rights reserved.</p>
-       </section> 
+        <p>2021 © Olhar. All rights reserved.</p>
+      </section>
     </main>
 
-    <script src="assets/scripts/main.js"></script>  
-</body>
+    <script src="bundle.js"></script>
+  </body>
 </html>
