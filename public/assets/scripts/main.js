@@ -18,6 +18,7 @@ if (btnLogout) {
 
 if (menu) {
   auth.onAuthStateChanged((user) => {
+    console.log(auth.onAuthStateChanged);
     if (user) {
       const userElement = document.querySelector(".footer > div > div");
 
