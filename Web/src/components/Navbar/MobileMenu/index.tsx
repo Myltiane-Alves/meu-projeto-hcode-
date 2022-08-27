@@ -1,15 +1,21 @@
 import * as S from "./styles";
 import { Link } from "react-router-dom";
+import { AiOutlineClose, AiOutlineAlignRight } from "react-icons/ai";
 import logo from "../../../assets/img/visionclinic.png"
-export default function MobileMenu() {
+import React from "react";
+interface MobileMenuProps {
+  openMobileMenu(): void;
+}
+
+const MobileMenu: React.FC<MobileMenuProps> = ({openMobileMenu}) => {
   return (
     <S.Container>
       <S.Nav>
-        <span>
+        <div className="logoMenu">
           <a>
-            {/* <img src={logo} alt="logo" /> */}
+            <img src={logo} alt="logo" />
           </a>
-        </span>
+        </div>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">Sobre</a></li>
@@ -18,16 +24,23 @@ export default function MobileMenu() {
           <li><a href="services.html">Serviços</a></li>
           <li><a href="schedules-new.html">Agendamentos</a></li>
           <li>
-            <Link to="login">
+            <div>
               <button
                 type="button"
               >
-                Login
+               <Link to=""> Login </Link>
               </button>
-            </Link>
+            </div>
           </li>
         </ul>
+
+          <button className="closeMenu" type="button" onClick={openMobileMenu}>
+            <AiOutlineClose />
+          </button>
+
       </S.Nav>
     </S.Container>
   )
 }
+
+export default MobileMenu;

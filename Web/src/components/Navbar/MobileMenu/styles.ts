@@ -19,11 +19,19 @@ export const Nav = styled.nav`
     flex-direction: column;
     width: 65vw;
     height: 100vh;
-    padding: 2rem 4rem 0 2rem;
+    padding: 2rem 6rem 0 0rem;
     position: relative;
-
+    div.logoMenu {
+      a {
+        img {
+          width: 70%;
+          height: auto;
+        }
+      }
+    }
     ul {
       flex-direction: column;
+      text-align: left;
       li {
         /* font-size: 5.5rem; */
         a {
@@ -31,7 +39,34 @@ export const Nav = styled.nav`
           color: #fff;
           line-height: 36px;
         }
+        div {
+          margin-top: 100px;
+          button {
+            /* align-items: center; */
+            width: 200px;
+            height: 50px;
+            background-color: #f95259;
+            a {
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              color: #fff;
+              line-height: 24px;
+            }
+          }
+        }
       }
     }
+
+    .closeMenu {
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      color: #fff;
+      font-size: 32px;
+      padding: 10px;
+      background-color: transparent;
+    }
+
   }
 `

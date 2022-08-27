@@ -1,7 +1,7 @@
 
 import * as S from "./styles";
 import whats from "../../assets/img/whatsapp.webp"
-export default function Footer() {
+export default function Contact() {
     return (
       <S.Container>
         <button
