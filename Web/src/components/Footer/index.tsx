@@ -14,6 +14,7 @@ export default function Footer() {
         </button>
         <div className="columns">
           <div>
+            <h4>Links</h4>
             <ul className="links">
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">Sobre</a></li>
@@ -23,8 +24,23 @@ export default function Footer() {
               <li><a href="schedules-new.html">Agendamentos</a></li>
             </ul>
           </div>
-
-        <p>Todos os direitos reservardos @Myltiane 2022</p>
+          <div className="address">
+            <h4>Endereço</h4>
+            <ul>
+              <li>
+                Brasília - DF
+              </li>
+              <li>
+                Setor Comecial Sul
+              </li>
+              <li>
+                Distrito Federal
+              </li>
+            </ul>
+          </div>
+          <div className="text-footer">
+            <p>Todos os direitos reservados @Myltiane 2022</p>
+          </div>
         </div>
       </S.Container>
     )

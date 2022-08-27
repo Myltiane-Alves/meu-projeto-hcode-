@@ -1,31 +1,69 @@
 
 import * as S from "./styles";
 import whats from "../../assets/img/whatsapp.webp"
+import { AiFillMail, AiFillGithub } from "react-icons/ai";
+import { RiWhatsappFill, RiSendPlaneFill } from "react-icons/ri";
+import { GiHouse } from "react-icons/gi";
+
+import { useForm } from 'react-hook-form';
 export default function Contact() {
-    return (
-      <S.Container>
-        <button
-          type="button"
-        >
-        {/* <a
-          href="https://api.whatsapp.com/send/?phone=5561984915007&text=Vim+Pelo+site&app_absent=0"
-          ><img src={whats} alt="Botão do Whatsapp"
-        /></a> */}
-        </button>
-        <div className="columns">
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  return (
+    <S.Container>
+      <div className="contact-form">
+        <h2>Contato</h2>
+        <form >
           <div>
-            <ul className="links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">Sobre</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="contact.html">Contato</a></li>
-              <li><a href="services.html">Serviços</a></li>
-              <li><a href="schedules-new.html">Agendamentos</a></li>
-            </ul>
+            <input
+              type="text"
+              placeholder="Nome"
+              {...register("Nome", { required: true, maxLength: 80 })}
+            />
+          </div>
+          <div>
+            <input type="text" placeholder="Email" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })} />
+          </div>
+          <div>
+            <input type="tel" placeholder="Número" {...register("Número", { required: true, maxLength: 12 })} />
+          </div>
+          <div>
+            <select {...register("Selecione o Serviço", { required: true })}>
+              <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Miss">Miss</option>
+              <option value="Dr">Dr</option>
+            </select>
+          </div>
+          <div>
+            <input type="datetime-local" placeholder="Escolha o Horário" {...register("Escolha o Horário", {})} />
+          </div>
+          <div>
+            <input type="text" placeholder="Mensagem" {...register("Mensagem", {})} />
           </div>
 
-        <p>Todos os direitos reservardos @Myltiane 2022</p>
+          <input type="submit" className="btn" />
+        </form>
+
+      </div>
+      <div className="contact-info">
+
+        <div className="email">
+          <AiFillMail size={24} style={{ color: "#FFFAFA" }} />
+          <p> myltiane.aux@gmail.com </p>
         </div>
-      </S.Container>
-    )
+        <div className="phone">
+          <RiWhatsappFill size={24} style={{ color: "#FFFAFA" }} />
+          <p> (61) 98491-5007 </p>
+        </div>
+        <div className="github">
+          <AiFillGithub size={24} style={{ color: "#FFFAFA" }} />
+          <p> https://github.com/Myltiane-Alves </p>
+        </div>
+
+
+
+      </div>
+    </S.Container>
+  )
 }
