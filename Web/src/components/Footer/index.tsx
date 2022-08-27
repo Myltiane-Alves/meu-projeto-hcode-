@@ -38,10 +38,10 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+        </div>
           <div className="text-footer">
             <p>Todos os direitos reservados @Myltiane 2022</p>
           </div>
-        </div>
       </S.Container>
     )
 }
