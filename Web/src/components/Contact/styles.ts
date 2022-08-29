@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  padding: 20px;
+  /* padding: 20px; */
   width: 100%;
   background-color: #156ac9;
   .contact-info {
