@@ -3,6 +3,21 @@ import styled from "styled-components";
 export const Container = styled.section`
   flex-direction: column;
   /* padding: 20px; */
+  .container-title {
+    padding-bottom: 20px;
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+    }
+    h1 {
+      text-align: center;
+      margin: 0;
+    }
+    p {
+      text-align: center;
+    }
+  }
   .container-plan {
 
     padding-bottom: 20px;
@@ -61,6 +76,16 @@ export const Container = styled.section`
     }
   }
 
+  @media (min-width: 768px) {
+    .container-title {
+      div {
+        padding: 20px;
+        p {
+          font-size: 22px;
+        }
+      }
+    }
+  }
   @media (min-width: 1024px) {
     .container-plan{
       .cards {
