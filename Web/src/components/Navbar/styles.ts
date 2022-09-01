@@ -2,46 +2,48 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
   width: 100%;
+  height: 130px;
+  /* background-color: red; */
 `;
 
 export const Content = styled.div`
   max-width: 1230px;
   padding: 0 2rem;
-  height: 6.4rem;
+  height: 130px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: no-wrap;
-
-  /* a.logo {
+  .container-logo {
+    top: 10px;
+    a {
+      .logo {
+         width: 100px;
+      }
+    }
+  }
+  a.logo {
     font-family: var(--text-title);
     font-size: 2rem;
     line-height: 2.68rem;
     font-weight: bold;
     color: var(--green);
-  } */
+  }
 
   button.mobileMenu {
     display: none;
   }
 
-  @media (max-width: 768px) {
-    /* background-color: red; */
-    div {
-      a {
-        .logo{
-          /* width: 100%; */
-        }
-      }
-    }
+  @media (max-width: 720px) {
 
-    .mobileMenu {
+
+    button.mobileMenu {
       display: flex;
-      padding: 1rem;
-      font-size: 2rem;
-      color: #FFF;
-      background: #fff;
+      padding: 16px;
+      font-size: 32px;
+      color: #6996fa;
+      background: transparent;
     }
 
     nav {
@@ -50,15 +52,10 @@ export const Content = styled.div`
   }
 
   @media (max-width: 500px) {
-    div {
-      a >.logo {
-        width: 100%;
-      }
 
-    }
 
     button.mobileMenu {
-      color: var(--blue);
+      color: #6996fa;
     }
   }
 
@@ -70,31 +67,36 @@ export const Content = styled.div`
       gap: 30px;
 
       li {
+
+        line-height: 22px;
         list-style: none;
         a {
           font-size: 22px;
-          font-weight: 600;
-          line-height: 36px;
+          font-weight: 500;
           transition: filter 0.2s;
-          color: #fff;
 
           &:hover {
-            color: #f75d43;
             filter: brightness(0.9);
           }
         }
+        .container-btnLogin {
+          .btnLogin {
+            padding: 1rem 1.87rem;
+            border-radius: 0.25rem;
+            line-height: 1.3rem;
+            transition: filter 0.2s;
+            background-color: #6996fa;
+            a {
+              font-size: 20px;
+              font-weight: 500;
+              color: #fff;
 
-        button {
-          font-weight: bold;
-          padding: 1rem 1.87rem;
-          color: var(--green);
-          border-radius: 0.25rem;
-          line-height: 1.3rem;
-          transition: filter 0.2s;
-
-          &:hover {
-            filter: brightness(0.9);
+            }
+            &:hover {
+              filter: brightness(0.9);
+            }
           }
+
         }
       }
     }

@@ -3,7 +3,6 @@ import * as S from "./styles";
 import whats from "../../assets/img/whatsapp.webp"
 import { AiFillMail, AiFillGithub } from "react-icons/ai";
 import { RiWhatsappFill, RiSendPlaneFill } from "react-icons/ri";
-import { GiHouse } from "react-icons/gi";
 
 import { useForm } from 'react-hook-form';
 export default function Contact() {
@@ -12,7 +11,7 @@ export default function Contact() {
   return (
     <S.Container>
       <div className="contact-form">
-        <h2>Contato</h2>
+        <h2>Fale Conosco</h2>
         <form >
           <div>
             <input
@@ -41,13 +40,11 @@ export default function Contact() {
           <div>
             <input type="text" placeholder="Mensagem" {...register("Mensagem", {})} />
           </div>
-
           <input type="submit" className="btn" />
         </form>
-
       </div>
       <div className="contact-info">
-
+        <h2>Contato</h2>
         <div className="email">
           <AiFillMail size={24} style={{ color: "#FFFAFA" }} />
           <p> myltiane.aux@gmail.com </p>
@@ -60,9 +57,6 @@ export default function Contact() {
           <AiFillGithub size={24} style={{ color: "#FFFAFA" }} />
           <p> https://github.com/Myltiane-Alves </p>
         </div>
-
-
-
       </div>
     </S.Container>
   )

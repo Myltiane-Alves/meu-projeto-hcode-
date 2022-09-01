@@ -1,6 +1,6 @@
 import * as S from './styles';
 import sobre from "../../assets/img/aboutus.webp";
-export default function About() {
+export default function AboutSection() {
   return (
     <S.Container>
       <div className="about">

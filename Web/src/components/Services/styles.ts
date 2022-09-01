@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
   flex-direction: column;
   /* padding: 20px; */
+  padding: 40px 0 40px 0;
   .container-title {
     padding-bottom: 20px;
     flex-direction: column;
@@ -12,14 +13,15 @@ export const Container = styled.section`
       text-align: center;
       color: #919191;
     }
-    h1 {
-      font-size: 40px;
+    h2 {
+      font-size: 32px;
+      line-height: 36px;
       color: #6996fa;
       text-align: center;
       margin: 0;
     }
   }
-  .container-plan {
+  .container-cards {
 
     padding-bottom: 20px;
     background-color: #fff;
@@ -34,43 +36,18 @@ export const Container = styled.section`
         padding-top: 20px;
         margin: 20px auto;
         h3 {
-          font-size: 32px;
+          font-size: 20px;
           color: #6996fa;
-          line-height: 36px;
-        }
-        span {
-          font-size: 18px;
-          font-weight: 700;
-          color: #919191;
+          line-height: 26px;
         }
         p {
-          font-size: 18px;
+          font-size: 16px;
+          font-weight: 600;
           line-height: 24px;
           color: #919191;
         }
-        .container-icons {
-          flex-direction: column;
-          padding-bottom: 20px;
-          .check {
-            padding-top: 10px;
-            display: flex;
-            p {
-              margin: 0 0 0 5px;
-            }
-          }
-        }
-        .container-btn {
-          button {
-            width: 200px;
-            height: 40px;
-            background-color: #156ac9;
-            a {
-              color: #fff;
-              font-size: 16px;
-              font-weight: 700;
-
-            }
-          }
+        .icons {
+          color: #6996fa;
         }
       }
     }
@@ -87,7 +64,7 @@ export const Container = styled.section`
     }
   }
   @media (min-width: 1024px) {
-    .container-plan{
+    .container-cards{
       .cards {
 
         flex-direction: row;

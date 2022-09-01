@@ -3,18 +3,20 @@ import styled from "styled-components";
 export const Container = styled.section`
   width: 100%;
   .about {
-    /* padding: 20px; */
+    padding: 20px;
     width: 90%;
     h2 {
-      font-size: 40px;
       font-weight: bold;
       line-height: 45px;
-      color: #156ac9;
+      color: #6996fa;
     }
 
     p {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
+      line-height: 24px;
+      color: #919191;
+      text-align: left;
     }
     button {
       /* background-color: #58f6ff; */
@@ -24,7 +26,6 @@ export const Container = styled.section`
       width: 200px;
       height: 40px;
       cursor: pointer;
-      /* padding: 15px; */
       a {
         color: #fff;
         font-size: 1rem;
@@ -37,11 +38,10 @@ export const Container = styled.section`
     padding-bottom: 1rem;
   }
   .about-img {
-    background-image: url("../../../src/assets/img/aboutus.webp");
+    background-image: url("../../../src/assets/img/bg8.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* width: 100%; */
     width: 400px;
     height: 300px;
     padding-top: 1.375rem;
@@ -56,8 +56,19 @@ export const Container = styled.section`
     }
   }
   @media (min-width: 1280px) {
-    padding: 5rem;
-    div {
+    padding: 20px;
+    .about {
+      h2 {
+        font-size: 48px;
+        line-height: 50px;
+        text-align: left;
+      }
+      p {
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+    /* div {
       h2 {
         font-size: 2.5rem;
       }
@@ -73,6 +84,6 @@ export const Container = styled.section`
           font-weight: 300;
         }
       }
-    }
+    } */
   }
 `;

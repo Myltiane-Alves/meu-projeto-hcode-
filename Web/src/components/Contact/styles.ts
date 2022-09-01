@@ -3,10 +3,12 @@ import styled from "styled-components";
 export const Container = styled.section`
   /* padding: 20px; */
   width: 100%;
-  background-color: #156ac9;
+  background-color: #40518a;
   .contact-info {
 
-
+    h2 {
+      color: #fff;
+    }
     .email {
       padding-top: 32px;
     }
@@ -129,6 +131,10 @@ export const Container = styled.section`
     }
   }
 
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   @media (min-width: 1280px) {
     display: flex;
     width: 100%;

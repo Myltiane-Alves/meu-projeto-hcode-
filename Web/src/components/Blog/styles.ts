@@ -50,14 +50,26 @@ background-color: #F8F8F8;
   h2 {
     font-size: 32px;
     text-align: center;
-    color: #5764c1;
-
+    color: #6996fa;
   }
   p {
     text-align: center;
     color: #919191;
   }
 }
+
+@media (min-width: 768px) {
+    .container-title {
+      h2 {
+        font-size: 48px;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+    }
+  }
 
 `;
 
@@ -67,7 +79,7 @@ export const Card = styled.div`
     flex-direction: column;
     h3 {
       font-weight: 600;
-      color: #333;
+      color: #6996fa;
     }
 
     p {
@@ -80,7 +92,7 @@ export const Card = styled.div`
     background-color: transparent;
     border: none;
     a {
-      color: #5764c1;
+      color: #6996fa;
     }
   }
   .btn:hover {
@@ -88,5 +100,6 @@ export const Card = styled.div`
     background-color: #F8F8F8;
     color: #fff;
   }
+
 
 `;

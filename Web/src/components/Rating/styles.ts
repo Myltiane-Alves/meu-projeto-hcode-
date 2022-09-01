@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
   flex-direction: column;
   padding: 20px;
-  background-color: #2f3241;
+  background-color: #40518a;
   .container-title {
     h2 {
       font-size: 32px;
@@ -48,6 +48,7 @@ export const Container = styled.section`
     grid-template-columns: 1fr 1fr ;
     .container-title {
       width: 100%;
+
     }
     div {
       padding: 0;
@@ -67,10 +68,12 @@ export const Container = styled.section`
       h2 {
         font-size: 48px;
         line-height: 52px;
+        text-align: left;
       }
       p {
         font-size: 24px;
         line-height: 28px;
+        text-align: left;
       }
     }
     div {

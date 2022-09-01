@@ -4,15 +4,15 @@ export default function Plan() {
   return (
     <S.Container>
       <div className="container-title">
-        <p>Preços por planos</p>
+        <p>Conheça nossos planos</p>
         <h1>Planos</h1>
-        <div>
+        {/* <div>
           <p>
-            introduzimos o princípio da medicina de família,
+            princípio da medicina de família,
             o que significa que o médico de família atenderá à maioria dos pedidos médicos,
             com especialistas envolvidos apenas se necessário.
           </p>
-        </div>
+        </div> */}
       </div>
       <div className="container-plan">
         <div className="cards">

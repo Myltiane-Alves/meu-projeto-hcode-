@@ -12,7 +12,7 @@ import { Pagination, Navigation, Autoplay } from "swiper";
 
 import refrativa from "../../assets/img/cirurgia-refrativa.webp";
 
-export default function Blog() {
+export default function BlogSection() {
   return (
     <S.Container>
       <div className="container-title">
@@ -52,6 +52,99 @@ export default function Blog() {
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
+        <SwiperSlide
+          style={{
+            boxShadow: "0 1px 10px #ccc",
+            maxWidth: "350px",
+            borderRadius: "20px",
+            width: "100%",
+            display: "block"
+          }}
+        >
+          <S.Card
+            style={{
+              height: "100%"
+            }}
+          >
+            <img src={refrativa} alt="refrativa" />
+            <div className="card-text">
+              <h3>Cirurgia Refrativa</h3>
+              <p>
+                Se você tem um problema refrativo, como miopia, hipermetropia,
+                astigmatismo ou presbitopia, a cirurgia refrativa é um método
+                para corrigir ou melhorar sua visão....
+              </p>
+            </div>
+            <button
+              type="button"
+              className="btn"
+            >
+              <a href="https://www.google.com.br/">Leia Mais</a>
+            </button>
+          </S.Card>
+        </SwiperSlide>
+        <SwiperSlide
+          style={{
+            boxShadow: "0 1px 10px #ccc",
+            maxWidth: "350px",
+            borderRadius: "20px",
+            width: "100%",
+            display: "block"
+          }}
+        >
+          <S.Card
+            style={{
+              height: "100%"
+            }}
+          >
+            <img src={refrativa} alt="refrativa" />
+            <div className="card-text">
+              <h3>Cirurgia Refrativa</h3>
+              <p>
+                Se você tem um problema refrativo, como miopia, hipermetropia,
+                astigmatismo ou presbitopia, a cirurgia refrativa é um método
+                para corrigir ou melhorar sua visão....
+              </p>
+            </div>
+            <button
+              type="button"
+              className="btn"
+            >
+              <a href="https://www.google.com.br/">Leia Mais</a>
+            </button>
+          </S.Card>
+        </SwiperSlide>
+        <SwiperSlide
+          style={{
+            boxShadow: "0 1px 10px #ccc",
+            maxWidth: "350px",
+            borderRadius: "20px",
+            width: "100%",
+            display: "block"
+          }}
+        >
+          <S.Card
+            style={{
+              height: "100%"
+            }}
+          >
+            <img src={refrativa} alt="refrativa" />
+            <div className="card-text">
+              <h3>Cirurgia Refrativa</h3>
+              <p>
+                Se você tem um problema refrativo, como miopia, hipermetropia,
+                astigmatismo ou presbitopia, a cirurgia refrativa é um método
+                para corrigir ou melhorar sua visão....
+              </p>
+            </div>
+            <button
+              type="button"
+              className="btn"
+            >
+              <a href="https://www.google.com.br/">Leia Mais</a>
+            </button>
+          </S.Card>
+        </SwiperSlide>
         <SwiperSlide
           style={{
             boxShadow: "0 1px 10px #ccc",

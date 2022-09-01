@@ -1,5 +1,5 @@
 import About from "../../components/About";
-import Blog from "../../components/Blog";
+import BlogSection from "../../components/Blog";
 import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -10,16 +10,11 @@ import Rating from "../../components/Rating";
 import Services from "../../components/Services";
 
 
-export function Home() {
+export function Blog() {
   return (
     <>
       <Navbar />
-      <Header />
-      <Services />
-      <Rating />
-      <Plan />
-      <About />
-      <Blog />
+      <BlogSection />
       <Contact />
       <Footer />
     </>
