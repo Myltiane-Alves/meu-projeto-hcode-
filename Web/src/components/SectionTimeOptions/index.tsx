@@ -2,14 +2,18 @@ import Calendar from '../Calendar'
 import FooterButton from '../FooterButton'
 import * as S from './styles'
 
-export default function SchedulesNewSection() {
+export default function SectionTimeOptions() {
   return (
     <S.Container>
       <S.ContainerTitle>
         <h1>Escolha o Horário</h1>
       </S.ContainerTitle>
+      <header className="hours">
+        <h2>Horários do Dia</h2>
+        <hr/>
+      </header>
       <form>
-        <h3>Sexta, 02 de Agosto 2022</h3>
+        <h3>Sexta, 02 de Setembro 2022</h3>
         <div className="options">
           <label>
             <input type="radio" name="time" value="08:00" checked/>
@@ -61,6 +65,7 @@ export default function SchedulesNewSection() {
 
 
         </div>
+        <FooterButton/>
       </form>
     </S.Container>
   )

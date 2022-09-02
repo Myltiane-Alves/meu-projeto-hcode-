@@ -28,10 +28,11 @@ export default function Contact() {
           </div>
           <div>
             <select {...register("Selecione o Serviço", { required: true })}>
-              <option value="Mr">Mr</option>
-              <option value="Mrs">Mrs</option>
-              <option value="Miss">Miss</option>
-              <option value="Dr">Dr</option>
+              <option value="Mr">Agendamento de Consultas</option>
+              <option value="Mr">Agendamento de Exames</option>
+              <option value="Mr">Atendimento para lentes de Contato</option>
+              <option value="Mr">Marcar Cirurgia</option>
+
             </select>
           </div>
           <div>

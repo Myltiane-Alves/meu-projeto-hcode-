@@ -7,7 +7,11 @@ export default function FooterButton() {
         <input type="hidden" />
 
         <footer className="fixed">
-          <button type="submit">Continuar</button>
+          <button type="submit">
+           <a href="/schedulesTimeOptions">
+              Continuar
+            </a>
+          </button>
           <button
             className="btn-voltar"
           >
