@@ -6,6 +6,7 @@ import { Home } from "../page/Home";
 import { Login } from "../page/Login";
 import { Schedules } from "../page/Schedules";
 import { Services } from "../page/Services";
+import { Signup } from "../page/Signup";
 // import { SchedulesTimeOptions } from "../page/SchedulesTimeOptions";
 
 
@@ -34,7 +35,7 @@ export function AppRoutes() {
         <Route path="/login" element={<Login />} />
       </Routes>
       <Routes>
-        <Route path="/Signup" element={<Login />} />
+        <Route path="/Signup" element={<Signup />} />
       </Routes>
     </Router>
   )

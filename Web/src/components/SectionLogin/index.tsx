@@ -32,7 +32,7 @@ export default function SectionLogin() {
           <div className="container-btn">
             <button type="submit" className="btn"> Entrar</button>
             <span>Ainda não tem uma conta?</span>
-            <a>Criar Conta</a>
+            <a href="/signup">Criar Conta</a>
           </div>
         </form>
       </div>
