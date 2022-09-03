@@ -1,17 +1,18 @@
-
-import * as S from "./styles";
-import whats from "../../assets/img/whatsapp.webp"
-import { AiFillMail, AiFillGithub } from "react-icons/ai";
-import { RiWhatsappFill, RiSendPlaneFill } from "react-icons/ri";
-
+import Calendar from '../Calendar'
+import FooterButton from '../FooterButton'
+import * as S from './styles'
 import { useForm } from 'react-hook-form';
-export default function Contact() {
+import agendamento from "../../assets/img/agenda.png"
+export default function SectionLogin() {
   const { register, handleSubmit, formState: { errors } } = useForm();
-
   return (
     <S.Container>
       <div className="contact-form">
-        <h2>Fale Conosco</h2>
+        <div className="form-header">
+          <h2>Consulta</h2>
+          <h2>Agende sua Consulta</h2>
+          <p>Preencha o Formulário abaixo</p>
+        </div>
         <form >
           <div>
             <input
@@ -27,7 +28,8 @@ export default function Contact() {
             <input type="tel" placeholder="Número" {...register("Número", { required: true, maxLength: 12 })} />
           </div>
           <div>
-            <select {...register("Selecione o Serviço", { required: true })}>
+            <select placeholder="Selecione" >
+              <option value="">Selecione</option>
               <option value="Mr">Agendamento de Consultas</option>
               <option value="Mr">Agendamento de Exames</option>
               <option value="Mr">Atendimento para lentes de Contato</option>
@@ -41,23 +43,16 @@ export default function Contact() {
           <div>
             <input type="text" placeholder="Mensagem" {...register("Mensagem", {})} />
           </div>
-          <input type="submit" className="btn" />
+          <div className="container-btn">
+            <button type="submit" className="btn" >
+              <a>Agendar Consulta</a>
+            </button>
+          </div>
         </form>
       </div>
-      <div className="contact-info">
-        <h2>Contato</h2>
-        <div className="email">
-          <AiFillMail size={24} style={{ color: "#FFFAFA" }} />
-          <p> myltiane.aux@gmail.com </p>
-        </div>
-        <div className="phone">
-          <RiWhatsappFill size={24} style={{ color: "#FFFAFA" }} />
-          <p> (61) 98491-5007 </p>
-        </div>
-        <div className="github">
-          <AiFillGithub size={24} style={{ color: "#FFFAFA" }} />
-          <p> https://github.com/Myltiane-Alves </p>
-        </div>
+      <div className="about-img">
+        <img src={agendamento} alt="agendamento de consulta" />
+
       </div>
     </S.Container>
   )

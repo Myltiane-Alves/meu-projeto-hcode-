@@ -7,21 +7,17 @@ import Navbar from "../../components/Navbar";
 import MobileMenu from "../../components/Navbar/MobileMenu";
 import Plan from "../../components/Plan";
 import Rating from "../../components/Rating";
-import Services from "../../components/SectionServices";
-import SectionContact from "../../components/SectionContact";
+import SectionServices from "../../components/SectionServices";
 
 
-export function Home() {
+
+export function Services() {
   return (
     <>
       <Navbar />
       <Header />
-      <Services />
+      <SectionServices />
       <Rating />
-      <Plan />
-      <About />
-      <Blog />
-      <SectionContact />
       <Footer />
     </>
   )

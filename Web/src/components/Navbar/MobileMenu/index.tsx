@@ -29,7 +29,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({openMobileMenu}) => {
                 type="button"
                 className="btnLogin"
               >
-               <Link to=""> Login </Link>
+               <Link to="/login"> Login </Link>
               </button>
             </div>
           </li>

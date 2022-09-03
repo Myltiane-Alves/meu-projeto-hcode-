@@ -3,7 +3,7 @@ import sobre from "../../assets/img/aboutus.webp";
 import { MdOutlineMedicalServices } from "react-icons/md";
 import { FaRegHospital } from "react-icons/fa";
 import { Ri24HoursFill } from "react-icons/ri";
-export default function Services() {
+export default function SectionServices() {
   return (
     <S.Container>
       <div className="container-title">

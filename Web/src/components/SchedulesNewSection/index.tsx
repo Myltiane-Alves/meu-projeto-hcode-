@@ -2,13 +2,17 @@ import Calendar from '../Calendar'
 import FooterButton from '../FooterButton'
 import * as S from './styles'
 import { useForm } from 'react-hook-form';
+import agendamento from "../../assets/img/agenda.png"
 export default function SchedulesNewSection() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   return (
     <S.Container>
       <div className="contact-form">
-        <h2>Agende sua Consulta</h2>
-        <p>Preencha o Formulário abaixo</p>
+        <div className="form-header">
+          <h2>Consulta</h2>
+          <h2>Agende sua Consulta</h2>
+          <p>Preencha o Formulário abaixo</p>
+        </div>
         <form >
           <div>
             <input
@@ -47,7 +51,7 @@ export default function SchedulesNewSection() {
         </form>
       </div>
       <div className="about-img">
-        {/* <img src={sobre} alt="sobre" /> */}
+        <img src={agendamento} alt="agendamento de consulta" />
 
       </div>
     </S.Container>

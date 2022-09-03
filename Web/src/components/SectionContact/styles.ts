@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  /* padding: 20px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: 100%;
-  background-color: #40518a;
+  background-color: #6996fa;
   .contact-info {
 
     h2 {
@@ -130,6 +131,28 @@ export const Container = styled.section`
       }
     }
   }
+  .address {
+    h2 {
+      color: #fff;
+    }
+    .address-info {
+
+      flex-direction: column;
+      padding-left: 15px;
+      div {
+        width: 340px;
+        h3 {
+          color: #fff;
+          text-align: initial;
+        }
+        p {
+          font-size: 15px;
+          color: #d1cece;
+          text-align: initial;
+        }
+      }
+    }
+  }
 
   @media (min-width: 768px) {
     display: grid;
@@ -182,6 +205,16 @@ export const Container = styled.section`
     }
     .contact-form {
       width: 50%;
+    }
+    .address {
+      h2 {
+        font-size: 40px;
+      }
+      .address-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+      }
     }
   }
 `;
