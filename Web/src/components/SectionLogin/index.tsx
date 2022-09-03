@@ -1,58 +1,67 @@
-import Calendar from '../Calendar'
-import FooterButton from '../FooterButton'
 import * as S from './styles'
 import { useForm } from 'react-hook-form';
-import agendamento from "../../assets/img/agenda.png"
+import logo from "../../assets/img/visao.png"
+import linkedin from "../../assets/img/linkedin.png"
+import instagram from "../../assets/img/instagram.png"
+import youtube from "../../assets/img/youtube2.png"
+import whatsapp from "../../assets/img/whatsapp2.png"
 export default function SectionLogin() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   return (
     <S.Container>
       <div className="contact-form">
         <div className="form-header">
-          <h2>Consulta</h2>
-          <h2>Agende sua Consulta</h2>
-          <p>Preencha o Formulário abaixo</p>
+          <a href="/">
+            <img src={logo}  alt="logo"/>
+          </a>
         </div>
         <form >
-          <div>
-            <input
-              type="text"
-              placeholder="Nome"
-              {...register("Nome", { required: true, maxLength: 80 })}
-            />
-          </div>
-          <div>
+          <h1>Login</h1>
+          <div className="fields">
+            <div className="field">
+              <input
+                type="password"
+                placeholder="Senha"
+                {...register("Senha", { required: true, maxLength: 80 })}
+              />
+            </div>
+          <div className="field">
             <input type="text" placeholder="Email" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })} />
           </div>
-          <div>
-            <input type="tel" placeholder="Número" {...register("Número", { required: true, maxLength: 12 })} />
-          </div>
-          <div>
-            <select placeholder="Selecione" >
-              <option value="">Selecione</option>
-              <option value="Mr">Agendamento de Consultas</option>
-              <option value="Mr">Agendamento de Exames</option>
-              <option value="Mr">Atendimento para lentes de Contato</option>
-              <option value="Mr">Marcar Cirurgia</option>
-
-            </select>
-          </div>
-          <div>
-            <input type="datetime-local" placeholder="Escolha o Horário" {...register("Escolha o Horário", {})} />
-          </div>
-          <div>
-            <input type="text" placeholder="Mensagem" {...register("Mensagem", {})} />
           </div>
           <div className="container-btn">
-            <button type="submit" className="btn" >
-              <a>Agendar Consulta</a>
-            </button>
+            <button type="submit" className="btn"> Entrar</button>
+            <span>Ainda não tem uma conta?</span>
+            <a>Criar Conta</a>
           </div>
         </form>
       </div>
       <div className="about-img">
-        <img src={agendamento} alt="agendamento de consulta" />
+        <img src={logo} alt="Logo" className="logo"/>
+        <div className="container-icons">
+          <div>
+            <a href="https://www.linkedin.com/in/myltiane-alves/">
+              <img src={linkedin} alt="Linkedin" />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com">
+              <img src={instagram} alt="Instagram" />
+            </a>
+          </div>
+          <div>
+            <a href="https://api.whatsapp.com/send/?phone=5561984915007&text=Vim+Pelo+site&app_absent=0">
+              <img src={whatsapp} alt="Whatsapp" />
+            </a>
+          </div>
+          <div>
+            <a href="https://youtube.com">
+              <img src={youtube} alt="Youtube" />
+            </a>
+          </div>
 
+        </div>
+        <p>Todos os Direitos Reservados @Myltiane 2022</p>
       </div>
     </S.Container>
   )
