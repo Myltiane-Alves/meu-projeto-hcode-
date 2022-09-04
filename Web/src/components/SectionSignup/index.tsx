@@ -10,13 +10,8 @@ export default function SectionSignup() {
   return (
     <S.Container>
       <div className="contact-form">
-        <div className="form-header">
-          <a href="/">
-            <img src={logo}  alt="logo"/>
-          </a>
-        </div>
         <form >
-          <h1>Login</h1>
+          <h1>Cadastrar Usuário</h1>
           <div className="fields">
             <div className="field">
               <input
@@ -37,7 +32,7 @@ export default function SectionSignup() {
               <input type="text" placeholder="CEP" {...register("CEP", { required: true, pattern: /^\S+@\S+$/i })} />
             </div>
             <div className="field">
-              <input type="text" placeholder="UF" {...register("UF", { required: true, pattern: /^\S+@\S+$/i })} />
+              <input type="text" placeholder="RUA" {...register("UF", { required: true, pattern: /^\S+@\S+$/i })} />
             </div>
             <div className="field">
               <select placeholder="Estado" {...register("state", { required: true, pattern: /^\S+@\S+$/i })} >
@@ -109,34 +104,36 @@ export default function SectionSignup() {
           </div>
         </form>
       </div>
+      <div className="about-img">
+        <a href="/">
+          <img src={logo} alt="Logo" className="logo"/>
+        </a>
+        <div className="container-icons">
+          <div>
+            <a href="https://www.linkedin.com/in/myltiane-alves/">
+              <img src={linkedin} alt="Linkedin" />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com">
+              <img src={instagram} alt="Instagram" />
+            </a>
+          </div>
+          <div>
+            <a href="https://api.whatsapp.com/send/?phone=5561984915007&text=Vim+Pelo+site&app_absent=0">
+              <img src={whatsapp} alt="Whatsapp" />
+            </a>
+          </div>
+          <div>
+            <a href="https://youtube.com">
+              <img src={youtube} alt="Youtube" />
+            </a>
+          </div>
+
+        </div>
+        <p>Todos os Direitos Reservados @Myltiane 2022</p>
+      </div>
     </S.Container>
   )
 }
-/*
-  <div className="about-img">
-    <img src={logo} alt="Logo" className="logo"/>
-    <div className="container-icons">
-      <div>
-        <a href="https://www.linkedin.com/in/myltiane-alves/">
-          <img src={linkedin} alt="Linkedin" />
-        </a>
-      </div>
-      <div>
-        <a href="https://www.instagram.com">
-          <img src={instagram} alt="Instagram" />
-        </a>
-      </div>
-      <div>
-        <a href="https://api.whatsapp.com/send/?phone=5561984915007&text=Vim+Pelo+site&app_absent=0">
-          <img src={whatsapp} alt="Whatsapp" />
-        </a>
-      </div>
-      <div>
-        <a href="https://youtube.com">
-          <img src={youtube} alt="Youtube" />
-        </a>
-      </div>
 
-    </div>
-    <p>Todos os Direitos Reservados @Myltiane 2022</p>
-  </div>*/

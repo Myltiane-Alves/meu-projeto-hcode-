@@ -1,19 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  background-image: url("../../../src/assets/img/bg8.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: right;
-  background-position-x: center;
-  min-height: 300px;
+  background-color: #FAFAFA;
+  padding: 20px;
  .contact-form {
    flex-direction: column;
-   /* background-color: #f8fafc; */
-   /* background-color: #F8F8F8; */
-   background-color: #fff;
-   padding: 40px;
-    .form-header {
+   padding: 10px;
+   .form-header {
       padding-top: 20px;
       display: flex;
       a {
@@ -31,19 +24,19 @@ export const Container = styled.section`
     }
     form {
       flex-direction: column;
+      padding-bottom: 20px;
+
       h1 {
-        font-size: 32px;
+        font-size: 24px;
         font-weight: 500;
-        color: #FFFAFA;
+        color: #6996fa;
         text-align: center;
         text-transform: uppercase;
       }
       flex-direction: column;
-      padding: 20px;
-      width: 80%;
+      width: 100%;
       .fields {
         .field {
-
           display: grid;
           flex-direction: column;
           padding-bottom: 16px;
@@ -53,22 +46,25 @@ export const Container = styled.section`
             font-weight: bold;
             outline: none;
             line-height: 32px;
-            /* border: none; */
-            border-bottom: 2px solid #FFFAFA;
+            border: 2px solid #E6E5E5;
             padding: 10px;
-            /* background-color: transparent; */
+            background-color: #EDEDED;
             transition: all 0.3s ease-in-out;
+            color: #919191;
+
+          }
+          select::placeholder {
+            color: #919191;
           }
           input {
             font-size: 20px;
             font-weight: 500;
             outline: none;
             line-height: 32px;
-            /* border: none; */
             border-radius: 4px;
-            border-bottom: 2px solid #FFFAFA;
+            border: 2px solid #E6E5E5;
             padding: 10px;
-            background-color: #F8FAFC;
+            background-color: #EDEDED;
             transition: all 0.3s ease-in-out;
           }
           input:focus {
@@ -77,16 +73,19 @@ export const Container = styled.section`
           input::placeholder {
             color: #919191;
           }
+          input[type="date"] {
+            color: #919191;
+          }
         }
       }
       .container-btn {
         flex-direction: column;
         .btn {
-          border: none;
+          border: 2px solid #E6E5E5;
           border-radius: 3px;
           padding: 10px 30px;
           transition: 0.5s ease-in-out;
-          background-color: #FFFAFA;
+          background-color: #E6E5E5;
           width: 100%;
           max-width: 300px;
           height: 60px;
@@ -128,9 +127,12 @@ export const Container = styled.section`
       }
     }
   }
+  .about-img {
+    display: none;
+  }
   @media (min-width: 768px) {
     .contact-form {
-      width: 100%;
+      width: 98%;
       .form-header {
         width: 100%;
         display: block;
@@ -146,26 +148,31 @@ export const Container = styled.section`
         .fields {
           display: grid;
           grid-template-columns: 1fr 1fr;
+          width: 90%;
+          padding: 50px 50px 0 50px;
         }
         h1 {
           font-size: 40px;
-          text-align: initial;
         }
         div {
           input {
             width: 80%;
           }
+          select {
+            width: 87%;
+          }
         }
         .container-btn {
           text-align: left;
+          padding-left: 50px;
         }
       }
     }
   }
   @media (min-width: 1280px) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
-    padding: 0;
     .contact-form {
       width: 100%;
       .form-header {
@@ -173,6 +180,24 @@ export const Container = styled.section`
       }
       width: 100%;
       form {
+        width: 100%;
+        background-color: transparent;
+        h1 {
+          margin: 0;
+          margin-top: 80px;
+        }
+        .fields {
+          .field {
+            min-width: 300px;
+            input {
+              width: 90%;
+            }
+            select {
+              width: 97%;
+            }
+          }
+
+        }
         .container-btn {
           span {
             font-size: 20px;
@@ -183,23 +208,23 @@ export const Container = styled.section`
           }
         }
       }
-      padding-bottom: 200px;
-    }
 
+    }
+    .about-img {
+      display: block;
+      width: 100%;
+      padding-top: 100px;
+      .logo {
+        width: 50%;
+      }
+      .container-icons {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 150px;
+        padding-top: 50px;
+        width: 400px;
+      }
+    }
   }
   `;
 
-export const ContainerTitle = styled.header`
-  width: 100%;
-  min-height: 130px;
-  background-color: #40518a;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  h1 {
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
-    text-transform: uppercase;
-  }
-`;

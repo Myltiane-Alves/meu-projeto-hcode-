@@ -17,6 +17,7 @@ export function Services() {
       <Navbar />
       <Header />
       <SectionServices />
+      <Plan />
       <Rating />
       <Footer />
     </>
